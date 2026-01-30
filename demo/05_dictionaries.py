@@ -1,4 +1,10 @@
 # This script demonstrates basic dictionary operations in Python.
+# we define dics with curly braces.
+# looks like json. Pythin creates json as dictionaries.
+
+#retireive info from a dic by using square brackets. we are treating keys as indexs.
+#to iterate over key value pairs in python, e use the items()
+# k is key, v is value
 student = {"name": "Alice", "age": 21}
 student["gpa"] = 3.8
 # Accessing values
@@ -8,21 +14,28 @@ for k, v in student.items():
 # Updating values
 student["age"] = 22
 print("Updated age:", student["age"])
-# Deleting a key-value pair
+
+# Deleting a key-value pair- use del command
 del student["gpa"]
 print("After deleting gpa:", student)
-# Checking for key existence
+
+# Checking for key existence- use "in"
 if "name" in student:
     print("Name exists in student dictionary.")
+
 # Using get method to avoid KeyError
+# access value safely in dic in case the key is not there
 gpa = student.get("gpa", "Not Available")
 print("GPA:", gpa)
+
 # Iterating over keys
 for key in student.keys():
     print("Key:", key)
+
 # Iterating over values
 for value in student.values():
     print("Value:", value)
+
 # Nested dictionary
 courses = {"Math": {"credits": 3, "grade": "A"},
 "Science": {"credits": 4, "grade": "B"}}
